@@ -1,0 +1,680 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1362538448108 "http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Ontology1362538448108="http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#isSoldAt -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1362538448108;isSoldAt">
+        <owl:inverseOf rdf:resource="&Ontology1362538448108;sell"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#sell -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1362538448108;sell">
+        <rdfs:domain rdf:resource="&Ontology1362538448108;quán"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Ontology1362538448108;linh_tinh"/>
+                    <rdf:Description rdf:about="&Ontology1362538448108;đồ_uống"/>
+                    <rdf:Description rdf:about="&Ontology1362538448108;đồ_ăn"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Coordinate -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;Coordinate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&Ontology1362538448108;Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Latitude -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;Latitude">
+        <rdfs:subPropertyOf rdf:resource="&Ontology1362538448108;Coordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Location -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;Location">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1362538448108;quán"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Longitude -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;Longitude">
+        <rdfs:subPropertyOf rdf:resource="&Ontology1362538448108;Coordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Name -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;Name">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Price -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;Price">
+        <rdfs:domain rdf:resource="&Ontology1362538448108;linh_tinh"/>
+        <rdfs:domain rdf:resource="&Ontology1362538448108;đồ_uống"/>
+        <rdfs:domain rdf:resource="&Ontology1362538448108;đồ_ăn"/>
+        <rdfs:range rdf:resource="&xsd;unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#vị -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;vị">
+        <rdfs:domain rdf:resource="&Ontology1362538448108;linh_tinh"/>
+        <rdfs:domain rdf:resource="&Ontology1362538448108;đồ_uống"/>
+        <rdfs:domain rdf:resource="&Ontology1362538448108;đồ_ăn"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#burger -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;burger">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn_nhanh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bánh -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bánh">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn_chính"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bánh_bao -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bánh_bao">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;bánh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bánh_cuốn -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bánh_cuốn">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;bánh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bánh_rán -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bánh_rán">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;bánh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bún -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bún">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn_chính"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bún_chả -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bún_chả">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;bún"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bún_riêu_cua -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bún_riêu_cua">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;bún"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bún_đậu -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bún_đậu">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;bún"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#bún_ốc -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;bún_ốc">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;bún"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#chocolate -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;chocolate">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống_nóng"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cháo -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cháo">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn_chính"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cháo_gà -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cháo_gà">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;cháo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cháo_lòng -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cháo_lòng">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;cháo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cháo_sườn -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cháo_sườn">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;cháo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cháo_trai -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cháo_trai">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;cháo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#chè -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;chè">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;linh_tinh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cà_phê -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cà_phê">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống_nóng"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cơm -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cơm">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn_chính"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cơm_chay -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cơm_chay">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;cơm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cơm_rang -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cơm_rang">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;cơm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cơm_rang_dưa_bò -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cơm_rang_dưa_bò">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;cơm_rang"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#cơm_rang_thập_cẩm -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;cơm_rang_thập_cẩm">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;cơm_rang"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#kebab -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;kebab">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn_nhanh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#kem -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;kem">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;linh_tinh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#linh_tinh -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;linh_tinh">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#nước_hoa_quả -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;nước_hoa_quả">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#phở -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;phở">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn_chính"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#phở_bò -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;phở_bò">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;phở"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#phở_gà -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;phở_gà">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;phở"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#pizza -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;pizza">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn_nhanh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#quán -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;quán"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#sữa -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;sữa">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống_vặt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#sữa_chua -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;sữa_chua">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống_vặt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#trà -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;trà">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống_nóng"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_uống -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_uống">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_uống_có_cồn -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_uống_có_cồn">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_uống_nhẹ -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_uống_nhẹ">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_uống_nóng -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_uống_nóng">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_uống_vặt -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_uống_vặt">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_uống"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_ăn -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_ăn">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_ăn_chính -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_ăn_chính">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_ăn_nhanh -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_ăn_nhanh">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_ăn_vặt -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;đồ_ăn_vặt">
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;đồ_ăn"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Cafe_Mộc -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Cafe_Mộc">
+        <rdf:type rdf:resource="&Ontology1362538448108;quán"/>
+        <Name>Cafe Mộc</Name>
+        <Location>Số nhà 33, nhà 12, ngõ 1213, Trần Đại Nghĩa</Location>
+        <sell rdf:resource="&Ontology1362538448108;Cà_phê_nâu"/>
+        <sell rdf:resource="&Ontology1362538448108;Cà_phê_sữa"/>
+        <sell rdf:resource="&Ontology1362538448108;Cà_phê_đen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Cà_phê_nâu -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Cà_phê_nâu">
+        <rdf:type rdf:resource="&Ontology1362538448108;cà_phê"/>
+        <Name>Cà phê nâu</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Cà_phê_sữa -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Cà_phê_sữa">
+        <rdf:type rdf:resource="&Ontology1362538448108;cà_phê"/>
+        <Name>Cà phê sữa</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Cà_phê_đen -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Cà_phê_đen">
+        <rdf:type rdf:resource="&Ontology1362538448108;cà_phê"/>
+        <Name>Cà phê đen</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Cơm_chay_Loving_Hut -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Cơm_chay_Loving_Hut">
+        <rdf:type rdf:resource="&Ontology1362538448108;cơm_chay"/>
+        <Name>Cơm chay Loving Hut</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Cơm_sinh_viên -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Cơm_sinh_viên">
+        <rdf:type rdf:resource="&Ontology1362538448108;cơm"/>
+        <Name>Cơm sinh viên</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Hoa_quả_dầm -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Hoa_quả_dầm">
+        <rdf:type rdf:resource="&Ontology1362538448108;linh_tinh"/>
+        <Name>Hoa quả dầm</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#KFC -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;KFC">
+        <rdf:type rdf:resource="&Ontology1362538448108;đồ_ăn_nhanh"/>
+        <Name>KFC</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#KFC_Trần_Đại_Nghĩa -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;KFC_Trần_Đại_Nghĩa">
+        <rdf:type rdf:resource="&Ontology1362538448108;quán"/>
+        <Name>KFC Trần Đại Nghĩa</Name>
+        <Location>11A7 Trần Đại Nghĩa</Location>
+        <sell rdf:resource="&Ontology1362538448108;KFC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Loving_Hut -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Loving_Hut">
+        <rdf:type rdf:resource="&Ontology1362538448108;quán"/>
+        <Location>Số 8, ngõ 40 2/3, Tạ Quang Bửu</Location>
+        <Name>Loving Hut</Name>
+        <sell rdf:resource="&Ontology1362538448108;Cơm_chay_Loving_Hut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Nhà_ăn_A15 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Nhà_ăn_A15">
+        <rdf:type rdf:resource="&Ontology1362538448108;quán"/>
+        <Name>Nhà ăn A15</Name>
+        <Location>A15, Tạ Quang Bửu,</Location>
+        <sell rdf:resource="&Ontology1362538448108;Cơm_sinh_viên"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Thanh_Hiền -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Thanh_Hiền">
+        <rdf:type rdf:resource="&Ontology1362538448108;quán"/>
+        <Location>Quán Cơm Thanh Hiền. Kios 12, Tạ Quang Bửu</Location>
+        <Name>Thanh Hiền</Name>
+        <sell rdf:resource="&Ontology1362538448108;Cơm_sinh_viên"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Vodka -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;Vodka">
+        <rdf:type rdf:resource="&Ontology1362538448108;đồ_uống_có_cồn"/>
+        <Name>Vodka</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#nem_chua_rán -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;nem_chua_rán">
+        <rdf:type rdf:resource="&Ontology1362538448108;đồ_ăn_vặt"/>
+        <Name>Nem chua rán</Name>
+        <vị>cay</vị>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#ốc_luộc -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;ốc_luộc">
+        <rdf:type rdf:resource="&Ontology1362538448108;đồ_ăn_vặt"/>
+        <Name>Ốc luộc</Name>
+        <vị>cay</vị>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#ốc_xào -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1362538448108;ốc_xào">
+        <rdf:type rdf:resource="&Ontology1362538448108;đồ_ăn_vặt"/>
+        <Name>Ốc xáo</Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
