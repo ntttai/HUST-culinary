@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 20px;
+    height : 100%;
+    overflow: hidden;
+    /*overflow: auto;*/
+}
+
+input {
+    font-size: 20px;
+    font-family: inherit;
+}
+
+header {
+    font-size: 30px;
+    text-align: center;
+}
+
+#logo {
+    height : 20%;
+    display: block;
+    margin: 10px auto 10px auto;
+}
+
+#search-area {
+    padding: 10px 0px 20px 0px;
+    text-align: center;
+    background-color: #9DFCF3;
+}
+
+#browse-area {
+    text-align: center;
+    height : 60%;
+}
+
+.column .title {
+    text-align: center;
+    height: 7%;
+    border: 1px groove;
+}
+
+.column .title span {
+}
+
+#browse-area .column {
+    float: left;
+    height : 100%;
+}
+
+.column .content {
+    padding-left: 10px;
+    text-align: left;
+    height : 93%;
+    overflow:scroll;
+}
+
+#left {
+    width: 25%;
+    background-color: #EEFC9D;
+}
+
+#center {
+    width: 50%;
+    background-color: #9DFCA0;
+}
+
+#right {
+    width: 25%;
+    background-color: #9DCBFC
+}
+
+footer {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+#contact-information {
+    float:left;
+}
+
+#admin-login {
+    float:right;
+    text-align: right;
+}

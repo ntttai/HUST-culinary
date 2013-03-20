@@ -48,7 +48,9 @@
     <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#isSoldAt -->
 
     <owl:ObjectProperty rdf:about="&Ontology1362538448108;isSoldAt">
+        <rdfs:range rdf:resource="&Ontology1362538448108;quán"/>
         <owl:inverseOf rdf:resource="&Ontology1362538448108;sell"/>
+        <rdfs:domain rdf:resource="&Ontology1362538448108;thực_phẩm"/>
     </owl:ObjectProperty>
     
 
@@ -57,15 +59,7 @@
 
     <owl:ObjectProperty rdf:about="&Ontology1362538448108;sell">
         <rdfs:domain rdf:resource="&Ontology1362538448108;quán"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&Ontology1362538448108;linh_tinh"/>
-                    <rdf:Description rdf:about="&Ontology1362538448108;đồ_uống"/>
-                    <rdf:Description rdf:about="&Ontology1362538448108;đồ_ăn"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="&Ontology1362538448108;thực_phẩm"/>
     </owl:ObjectProperty>
     
 
@@ -87,6 +81,12 @@
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&Ontology1362538448108;Location"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#Description -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;Description"/>
     
 
 
@@ -141,6 +141,14 @@
         <rdfs:domain rdf:resource="&Ontology1362538448108;linh_tinh"/>
         <rdfs:domain rdf:resource="&Ontology1362538448108;đồ_uống"/>
         <rdfs:domain rdf:resource="&Ontology1362538448108;đồ_ăn"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#website -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1362538448108;website">
+        <rdfs:domain rdf:resource="&Ontology1362538448108;quán"/>
     </owl:DatatypeProperty>
     
 
@@ -359,7 +367,7 @@
     <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#linh_tinh -->
 
     <owl:Class rdf:about="&Ontology1362538448108;linh_tinh">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;thực_phẩm"/>
     </owl:Class>
     
 
@@ -406,7 +414,9 @@
 
     <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#quán -->
 
-    <owl:Class rdf:about="&Ontology1362538448108;quán"/>
+    <owl:Class rdf:about="&Ontology1362538448108;quán">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
     
 
 
@@ -426,6 +436,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#thực_phẩm -->
+
+    <owl:Class rdf:about="&Ontology1362538448108;thực_phẩm">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#trà -->
 
     <owl:Class rdf:about="&Ontology1362538448108;trà">
@@ -437,7 +455,7 @@
     <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_uống -->
 
     <owl:Class rdf:about="&Ontology1362538448108;đồ_uống">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;thực_phẩm"/>
     </owl:Class>
     
 
@@ -477,7 +495,7 @@
     <!-- http://www.semanticweb.org/ontologies/2013/2/6/Ontology1362538448108.owl#đồ_ăn -->
 
     <owl:Class rdf:about="&Ontology1362538448108;đồ_ăn">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&Ontology1362538448108;thực_phẩm"/>
     </owl:Class>
     
 
@@ -522,6 +540,7 @@
     <owl:NamedIndividual rdf:about="&Ontology1362538448108;Cafe_Mộc">
         <rdf:type rdf:resource="&Ontology1362538448108;quán"/>
         <Name>Cafe Mộc</Name>
+        <website>https://maps.google.com/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=213516983788455280839.0004b5c8e3e5573e6110a</website>
         <Location>Số nhà 33, nhà 12, ngõ 1213, Trần Đại Nghĩa</Location>
         <sell rdf:resource="&Ontology1362538448108;Cà_phê_nâu"/>
         <sell rdf:resource="&Ontology1362538448108;Cà_phê_sữa"/>
